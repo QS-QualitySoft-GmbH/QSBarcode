@@ -1,0 +1,12 @@
+*.lic
+native/*/
+!native/README.md
+artifacts/
+build/
+**/build/
+.vs/
+**/.vs/
+bin/
+**/bin/
+obj/
+**/obj/
