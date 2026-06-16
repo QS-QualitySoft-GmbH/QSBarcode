@@ -11,6 +11,28 @@ Release artifact:
 qsbarcode-native-6.0.0.zip
 ```
 
+Product page, pricing and documentation:
+`https://qualitysoft.de/products/qs-barcode-sdk/`
+
+## What It Does
+
+The QS Barcode Native SDK provides the C ABI and C++17 wrapper for integrating
+the QS Barcode engine directly into native applications and services. It is
+intended for document and image based barcode recognition in business
+workflows.
+
+Supported feature groups include:
+
+- 1D / linear barcodes such as Code 128, Code 39, EAN/UPC, GS1-128 and related
+  industrial formats
+- PDF417
+- Data Matrix
+- QR Code
+- Aztec
+- multi-page PDF input
+- cross-platform native execution on Windows, Linux and macOS
+- license-aware feature checks for demo, evaluation and commercial deployments
+
 ## Contents
 
 - `include/qsbarcode/qsbarcode_loader.h` - stable C ABI
@@ -21,8 +43,21 @@ qsbarcode-native-6.0.0.zip
 - `SHA256SUMS.txt` - release manifest
 
 The public source repository keeps `native/` as a placeholder. Native binaries
-are attached to GitHub Releases after the monorepo build signs and verifies
-them.
+are distributed through GitHub Releases.
+
+## Installation
+
+Download the release archive and checksum from GitHub:
+
+- `https://github.com/QS-QualitySoft-GmbH/QSBarcode/releases/download/v6.0.0/qsbarcode-native-6.0.0.zip`
+- `https://github.com/QS-QualitySoft-GmbH/QSBarcode/releases/download/v6.0.0/qsbarcode-native-6.0.0.zip.sha256`
+
+Verify and extract the archive:
+
+```bash
+sha256sum -c qsbarcode-native-6.0.0.zip.sha256
+unzip qsbarcode-native-6.0.0.zip
+```
 
 ## Build From Source
 
@@ -137,3 +172,33 @@ executable. PDF rendering is internal to the native loader in ABI 2.0.0.
 This public repository contains C/C++ headers, CMake metadata, tests,
 documentation and native asset placeholders. Runtime libraries are distributed
 through GitHub Release assets.
+
+## Pricing And Commercial Use
+
+QS Barcode is proprietary commercial software owned by QS QualitySoft GmbH.
+Evaluation and production use require a valid license agreement unless your
+agreement explicitly grants demo usage.
+
+Pricing, licensing options and product documentation are maintained on the
+official product page:
+
+`https://qualitysoft.de/products/qs-barcode-sdk/`
+
+## Distribution Model
+
+The public GitHub repository is source-only. Runtime binaries are not committed
+to Git. Official native releases are delivered through GitHub Release ZIPs,
+which contain the matching runtime assets under `native/<rid>/` for Windows,
+Linux and macOS.
+
+For local C/C++ development, extract the release ZIP and point CMake or your
+application runtime layout at the matching `native/<rid>/` folder. Keep
+customer license files local as `qsbc.lic`; they are intentionally ignored by
+Git. Without a license file the SDK can run in demo mode and returns degraded
+demo results.
+
+## Links
+
+- Product page, pricing and documentation: `https://qualitysoft.de/products/qs-barcode-sdk/`
+- Public repository: `https://github.com/QS-QualitySoft-GmbH/QSBarcode`
+- Release downloads: `https://github.com/QS-QualitySoft-GmbH/QSBarcode/releases`
