@@ -59,6 +59,22 @@ sha256sum -c qsbarcode-native-6.0.0.zip.sha256
 unzip qsbarcode-native-6.0.0.zip
 ```
 
+## Demo
+
+The repository includes a public C/C++ consumer demo under
+`demo/native-public`. It downloads the official release ZIP, verifies its
+SHA256, fetches the public SDK tag and builds both a C and a C++17 executable.
+
+```powershell
+cmake -S demo/native-public -B artifacts/demo-native-public
+cmake --build artifacts/demo-native-public
+ctest --test-dir artifacts/demo-native-public --output-on-failure
+```
+
+If the local CMake installation cannot validate the system CA store while
+downloading from GitHub, configure with `-DQSBC_PUBLIC_TLS_VERIFY=OFF`. The
+release ZIP SHA256 is still verified.
+
 ## Build From Source
 
 ```bash
