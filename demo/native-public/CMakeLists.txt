@@ -8,7 +8,7 @@ set(FETCHCONTENT_BASE_DIR "${CMAKE_BINARY_DIR}/_fc" CACHE PATH "Short FetchConte
 
 set(QSBC_PUBLIC_VERSION "6.0.0" CACHE STRING "QSBarcode public SDK version")
 set(QSBC_PUBLIC_REPOSITORY "https://github.com/QS-QualitySoft-GmbH/QSBarcode.git" CACHE STRING "Public QSBarcode repository")
-set(QSBC_PUBLIC_RELEASE_SHA256 "4f5c19fa585b8c4c8b2d3f15d20f19cc2f2bf7b306525a41137fc2f52dcd0a1e" CACHE STRING "Expected SHA256 of the public native SDK ZIP")
+set(QSBC_PUBLIC_RELEASE_SHA256 "91897253d60b38776484962b77523a76b064c3a61cc18a842567a0dd52bcb74b" CACHE STRING "Expected SHA256 of the public native SDK ZIP")
 option(QSBC_PUBLIC_TLS_VERIFY "Verify TLS certificates when downloading the public release ZIP" ON)
 set(QSBC_DEMO_INPUT "" CACHE FILEPATH "Optional image or PDF fixture to scan")
 set(QSBC_DEMO_LICENSE "" CACHE FILEPATH "Optional qsbc.lic file")
